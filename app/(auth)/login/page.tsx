@@ -7,6 +7,7 @@ import {
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import Form from 'next/form';
 import Link from 'next/link';
 
 export default async function LoginPage() {
@@ -18,19 +19,21 @@ export default async function LoginPage() {
           <CardDescription>Faça seu login com email e senha.</CardDescription>
         </CardHeader>
         <CardContent>
-          <div>
-            <Label>Email</Label>
-            <Input type="email" name="email" placeholder="eu@exemplo.com" />
-          </div>
-          <div>
-            <Label>Senha</Label>
-            <Input type="password" name="password" placeholder="********" />
-          </div>
-          <div>
-            <Button className="w-full mt-6" type="submit">
-              Login
-            </Button>
-          </div>
+          <Form action={() => { }}>
+            <div>
+              <Label>Email</Label>
+              <Input type="email" name="email" placeholder="eu@exemplo.com" />
+            </div>
+            <div>
+              <Label>Senha</Label>
+              <Input type="password" name="password" placeholder="********" />
+            </div>
+            <div>
+              <Button className="w-full mt-6" type="submit">
+                Login
+              </Button>
+            </div>
+          </Form>
         </CardContent>
       </Card>
       <p className="text-sm text-muted-foreground mt-3">
